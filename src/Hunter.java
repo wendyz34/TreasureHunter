@@ -184,6 +184,10 @@ public class Hunter
         return printableKit;
 
     }
+    public String getTreasures(){
+        String printTreasures = replaceDelimiter(treasureCollection);
+        return printTreasures;
+    }
     private String replaceDelimiter(String str){
         String newStr = str;
         int index = 0;
@@ -192,10 +196,6 @@ public class Hunter
             newStr+=newStr.substring(0,index)+ " " + newStr.substring(index+1);
         }
         return newStr;
-    }
-    public String getTreasures(){
-        String printTreasures = replaceDelimiter(treasureCollection);
-        return printTreasures;
     }
 
     /**
